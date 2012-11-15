@@ -1,8 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+/* Reference: http://cssdeck.com/labs/css-only-pinterest-style-columns-layout */
+
+@media all and (min-width: 960px) {
+    #columns {
+        column-count: 4;
+    }
 }
 
-a {
-  color: #00B7FF;
+@media all and (min-width: 1170px) { 
+	#columns { 
+		column-count: 5; 
+	} 
+}
+
+#columns {
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+}
+
+.pin { 
+	-moz-column-break-inside: avoid; 
+	-webkit-column-break-inside: avoid; 
+	column-break-inside: avoid; 
+	display: inline-block; 
+	margin: 0 2px 15px; 
+	padding: 15px; 
+	border: 2px solid #FAFAFA; 
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4); 
+	background: #FEFEFE; 
+	background-image: linear-gradient(45deg, #FFF, #F9F9F9); 
 }
